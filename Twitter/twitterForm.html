@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="img-circle">
+    <img class="img" src="TwitterLogo.png" alt="" />
+  </div>
+  <h3>TWITTER</h3>
+
+  <div class="inputs">
+    <label>Email</label>
+    <input type="text" placeholder="example@test.com" />
+    <label>Password</label>
+    <input type="text" placeholder="min 6 characters long   " />
+    <button class="login-button">LOGIN</button>
+  </div>
+</div>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+  body {
+    background: #ecf0f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+  }
+  .container {
+    width: 300px;
+    height: 350px;
+    background: #ecf0f3;
+    border: 1px solid #f8f9fa;
+    border-radius: 30px;
+    box-shadow: -10px -10px 10px #f8f9fa, 10px 10px 10px #ced1d5;
+    position: relative;
+  }
+  .img-circle {
+    height: 60px;
+    border-radius: 50%;
+    width: 60px;
+    background-color: #ebf0f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: -10px -10px 10px #f8f9fa, 10px 10px 10px #ced1d5;
+    top: 40;
+    right: 120;
+  }
+  .img {
+    width: 50px;
+  }
+  h3 {
+    position: absolute;
+    color: #03a9f4;
+    top: 90;
+    right: 110;
+  }
+  .inputs {
+    position: absolute;
+    top: 150;
+    /* border: 2px solid black; */
+    text-align: left;
+    left: 20px;
+    height: 150px;
+    min-width: 250px;
+    display: grid;
+    place-content: center;
+  }
+  label {
+    font-size: 10px;
+    margin-left: 25;
+  }
+
+  input[type="text"] {
+    font-size: 10px;
+    background-color: #ebf0f3;
+    /* width: 100%; */
+    border-radius: 20px;
+    height: 20px;
+    padding: 15px;
+    width: 250px;
+
+    box-shadow: -10px -10px 10px #f8f9fa, 10px 10px 10px #ced1d5;
+    margin: 13px;
+  }
+  input {
+    display: block;
+    width: 250;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .login-button {
+    background-color: #03a9f4;
+    border: none;
+    border-radius: 20px;
+    height: 30;
+    box-shadow: -10px -10px 10px #f8f9fa, 10px 10px 10px #ced1d5;
+  }
+</style>

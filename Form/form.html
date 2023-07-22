@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container">
+<div class="basic-form">
+    <h4>Account</h4>
+    <div class="name-form">
+        <i class="fa fa-male icon"></i>
+        <input type="text" placeholder="Full Name">
+    </div>
+    <div class="email-form">
+        <i class="fa fa-envelope-o"></i>
+        <input type="text" placeholder="Email Address">
+    </div>
+    <div class="name-form">
+        <i class="fa fa-key"></i>
+        <input type="text" placeholder="Password">
+    </div>
+</div>
+
+<div class="dob-section">
+    <h4>Date of Birth</h4>
+    <input type="date">
+    <h4>Gender</h4>
+    <button>Male</button>
+    <button>Female</button>
+</div>
+
+<div class="payment-form">
+<h4>Payment Details</h4>
+<Button class="fa fa-drivers-license">Credit Card</Button>
+<Button class="fa fa-drivers-license-o">Paypal</Button>
+<i class="fa fa-folder-o"></i>
+<input type="text" placeholder="Card Number" >
+<i class="fa fa-frown-o"></i>
+<input type="text" placeholder="Card CVV">
+<input type="date">
+</div>
+
+<h4>Terms and conditions</h4>
+<p>I accept the terms and conditions for signing up to the service and hereby confirm I have read the privacy policy</p>
+</div>
+
+<style>
+    html{
+        display:flex;
+        place-content: center;
+    }
+    i{
+        box-sizing: border-box;
+        padding: 2px;
+        border: 1px solid ;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h4{
+        color: orange;
+    }
+    .container{
+        width:500px;
+        height: 550px;
+        background-color: white;
+        border: 2px solid black;
+        padding: 10px 25px 25px 25px;
+        box-sizing:border-box ;
+
+    }
+    input{
+        
+        width: 421px;
+        height: 30px;
+        margin-top: 10px;
+        /* margin-bottom: 10px; */
+
+    }
+    .basic-form{
+        /* background-color: red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+</style>
