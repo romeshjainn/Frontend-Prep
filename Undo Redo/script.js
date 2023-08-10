@@ -14,7 +14,7 @@ undo.onclick = function () {
     console.log(store);
     console.log(userInput);
   } else {
-    alert("type something")
+    alert("Input required!");
   } 
 };
 
