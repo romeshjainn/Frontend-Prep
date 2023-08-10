@@ -2,7 +2,6 @@ let input = document.getElementById("userInput");
 let undo = document.getElementById("undo");
 let redo = document.getElementById("redo");
 let store = [];
-let count = 0;
 let lengthCount = 0;
 
 undo.onclick = function () {
@@ -12,10 +11,9 @@ undo.onclick = function () {
     input.value = userInput.join("");
     store.push(removedChar);
     console.log(store);
-    console.log(userInput);
   } else {
     alert("Input required!");
-  } 
+  }
 };
 
 redo.onclick = function () {
@@ -29,4 +27,5 @@ redo.onclick = function () {
     console.log(userInput);
   }
 };
+
 
