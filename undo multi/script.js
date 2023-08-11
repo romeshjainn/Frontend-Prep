@@ -24,19 +24,19 @@ undo.onclick = function () {
   varStore.push(emailInput, numberInput, nameInput);
   varStore[count].value = " ";
 };
-let storeCount = -1;
-let inputCount = -1;
-redo.onclick = function () {
-  storeCount++;
-  inputCount++;
 
-  inputArr[inputCount].value = store[storeCount];
-  console.log(inputArr[inputCount]);
-  console.log(store[storeCount]);
-  //     inputCount;
-  // emailInput.value = store[];
-  // for (let i = 0; i < inputArr.length; i++){
-  // }
+redo.onclick = function () {
+    let storeCount = store.length - 1;
+    let inputCount = inputArr.length - 1;
+
+    inputArr[inputCount].value = store[storeCount];
+
+    store.pop();
+    inputArr.pop();
+
+    console.log(store);
+    console.log(inputArr);
 };
+
 
 // console.log(arr);
