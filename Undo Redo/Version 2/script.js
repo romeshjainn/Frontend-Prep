@@ -1,31 +1,33 @@
 let nameInput = document.getElementById("name");
 let numberInput = document.getElementById("number");
 let emailInput = document.getElementById("email");
-let inputArr = [emailInput, numberInput, nameInput];
+let inputArr = [];
 
 let undo = document.getElementById("undo");
 let redo = document.getElementById("redo");
-let count = -1;
 let store = [];
 let not = false;
+let count = 0;
 
 undo.onclick = function () {
   if (!not) {
-    store.push(emailInput.value, numberInput.value, nameInput.value);
+    inputArr = document.querySelectorAll("input");
+    for (let i = 0; i < inputArr.length; i++) {
+      store.push(inputArr[i].value);
+    }
     not = true;
+    count = inputArr.length - 1; 
   }
 
-  count++;
-  let currentInputs = [emailInput, numberInput, nameInput];
-  currentInputs[count].value = " ";
+  if (count >= 0) {
+    inputArr[count].value = " ";
+    count--;
+  }
 };
 
 redo.onclick = function () {
-  let storeCount = store.length - 1;
-  let inputCount = inputArr.length - 1;
-
-  inputArr[inputCount].value = store[storeCount];
-
-  store.pop();
-  inputArr.pop();
+  if (count < store.length - 1) {
+    count++;
+    inputArr[count].value = store[count];
+  }
 };
