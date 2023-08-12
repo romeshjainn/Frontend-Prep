@@ -24,7 +24,6 @@ undo.onclick = function () {
     count--;
   }
 };
-
 redo.onclick = function () {
   if (count < store.length - 1) {
     count++;
