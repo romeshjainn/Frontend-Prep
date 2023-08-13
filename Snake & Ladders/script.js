@@ -50,7 +50,10 @@ for (let i = 100; i > 0; i--) {
   }
 }
 arr[99].appendChild(pawn);
-// console.log(arr);
+
+let randomNumber = Math.floor(Math.random() * 6) + 1;
+console.log(randomNumber);
+
 count = arr.length -1;
 button.onclick = function () {
   for (let i = 0; i < arr.length; i++) {
