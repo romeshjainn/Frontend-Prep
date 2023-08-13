@@ -25,7 +25,7 @@ for (let i = 100; i > 0; i--) {
     (count >= 91 && count <= 100)
   ) {
     boxes.style.border = "2px solid white"
-    // container.className = "rowRevere";
+    // container.classList.add("rowRevere");
   }
   if (
     count <= 10 ||
