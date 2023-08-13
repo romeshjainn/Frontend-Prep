@@ -13,7 +13,8 @@ for (let i = 100; i > 0; i--) {
   boxes.style.width = "10%";
   boxes.style.aspectRatio = "1";
   boxes.style.backgroundColor = "red";
-
+  boxes.className = "gridCenter";
+  
   boxes.innerText = i;
   count = 100 - i + 1;
 
