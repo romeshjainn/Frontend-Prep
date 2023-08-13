@@ -47,13 +47,16 @@ console.log(arr);
 count = arr.length;
 
 button.onclick = function () {
-  count--;
-  console.log(boxCount);
-  let currentBox = arr[count];
-
-  if (currentBox) {
-    currentBox.style.border = "2px solid white";
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].style.border = "none"; // Remove border from all boxes
   }
+
+    count--;
+    let currentBox = arr[count];
+
+    if (currentBox) {
+      currentBox.style.border = "2px solid white"; // Apply border to the current box
+    }
 };
 // button.onclick = function () {
 //   count = count+1;
