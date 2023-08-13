@@ -1,0 +1,163 @@
+body {
+    font-family: montserrat, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.topbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.topbox ul {
+    display: flex;
+    padding-left: 15px;
+    gap: 30px;
+    list-style: none;
+    font-family: montserrat-regular, sans-serif;
+    font-size: 16px;
+    color: #2d2d2d;
+}
+
+.top-ui {
+    padding: 12px 0;
+}
+
+.headingInner {
+    display: flex;
+    font-size: 18px;
+
+    padding: 0;
+    text-align: left;
+}
+
+.totalProductCount {
+    color: #949494;
+    padding-left: 10px;
+    font: 16px montserrat-regular, sans-serif;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+}
+
+.bottombox {
+    max-height: 100%;
+    position: relative;
+    /* min-height: 579.545px; */
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.filterbox {
+    padding: 20px;
+}
+
+.filterheading {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #333;
+    line-height: 1;
+    font-family: montserrat, sans-serif;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    margin: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    padding: 12px 0;
+    border: none;
+}
+
+.list {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #333;
+    line-height: 1;
+    font-family: montserrat, sans-serif;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    width: 242.5px;
+    max-height: initial;
+    overflow: initial;
+    position: initial;
+    top: 79px;
+    transition: top 0.2s ease-out 0s;
+}
+
+.list-item {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    color: #333;
+    line-height: 1;
+    font-family: montserrat, sans-serif;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 16px 0 18px;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: 0 1px 0 0 hsla(0, 0%, 80%, 0.5);
+}
+
+.list-item span {
+    font-size: 16px;
+}
+
+.hovermenu {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+.fabric {
+    border: 1px solid rgb(115, 115, 115);
+    background: white;
+}
+
+.right-card {
+
+    background: transparent;
+    /* display: grid; */
+
+}
+
+.cards {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.img {
+    width: 200px;
+}
+
+.card1 {
+    position: relative;
+}
+
+.productNaming {
+    overflow: hidden;
+    width: 200px;
+}
+
+.hello{
+    display: flex;
+}
+
+.right-card{
+    border: 2px solid black;
+}

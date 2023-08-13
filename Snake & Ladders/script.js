@@ -1,6 +1,8 @@
 // Create pawn element
 let pawn = document.createElement("div");
 pawn.className = "pawn";
+let pawn2 = document.createElement("div");
+pawn2.className = "pawn2";
 
 // Create container element
 let container = document.createElement("div");
@@ -66,6 +68,7 @@ for (let i = 100; i > 0; i--) {
 
 // Append the pawn to a specific box
 arr[99].appendChild(pawn);
+arr[99].appendChild(pawn2);
 
 // Create and set up snake and ladder images
 let snake1 = document.createElement("img");
@@ -106,15 +109,22 @@ arr[20].appendChild(ladder4);
 
 // Set up dice roll functionality
 let curBox = 99;
+let check = 0;
 button.onclick = function () {
-  let randomNumber = Math.floor(Math.random() * 6) + 1;
-  curBox -= randomNumber;
-  if (curBox < 0) {
-    curBox = 0;
+  check++;
+  if (check % 1  == 0) {
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
+    curBox -= randomNumber;
+    if (curBox < 0) {
+      curBox = 0;
+    }
+    arr[curBox].innerText = " ";
+    arr[curBox].appendChild(pawn);
+    
   }
-  arr[curBox].appendChild(pawn);
-  console.log("New curBox:", curBox);
-  console.log("Rolled:", randomNumber);
+  else {
+    console.log("hello");
+  }
 };
 
 // Reset the game

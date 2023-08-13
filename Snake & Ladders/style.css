@@ -29,6 +29,11 @@ body{
     aspect-ratio: 1;
     background-color: white;
 }
+.pawn2{
+    width: 40%;
+    aspect-ratio: 1;
+    background-color: rgb(246, 242, 0);
+}
 button{
     /* width: 2rem; */
     padding: .5rem;

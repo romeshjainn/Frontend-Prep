@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="inputName" />
+    <input type="text" id="inputEmail" />
+    <input type="text" id="inputNumber" />
+
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
+
+    <script>
+      
+      let inputName = document.getElementById("inputName");
+      let inputEmail = document.getElementById("inputEmail");
+      let inputNumber = document.getElementById("inputNumber");
+
+      let arr = [inputNumber, inputEmail, inputName];
+      let store = [];
+      let undo = document.getElementById("undo");
+      let redo = document.getElementById("redo");
+      let helloSans = false;
+      let not = false;
+      let count = 0;
+      undo.onclick = function () {
+        if (!helloSans) {
+          let iName = inputName.value;
+          let iEmail = inputEmail.value;
+          let iNumber = inputNumber.value;
+          store.push(iName, iEmail, iNumber);
+          helloSans = true;
+        }
+
+        arr[count].value = " ";
+        count++;
+        console.log(store);
+      };
+    </script>
+  </body>
+</html>
