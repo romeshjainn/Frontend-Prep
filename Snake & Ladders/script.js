@@ -16,53 +16,20 @@ for (let i = 100; i > 0; i--) {
   boxes.style.backgroundColor = "red";
 
   boxes.innerText = i;
-  if (i <= 10) {
-    if (i % 2 == 0) {
+  count = 100 - i + 1;
+
+  if (
+    count <= 10 ||
+    (count > 20 && count <= 30) ||
+    (count > 40 && count <= 50) ||
+    (count > 60 && count <= 70) ||
+    (count > 80 && count <= 90)
+  ) {
+    if (count % 2 == 0) {
       boxes.style.backgroundColor = "blue";
     }
-  }
-  if (i>=10 &&i <= 20) {
-    if (i % 2 !== 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i>20 &&i <= 30) {
-    if (i % 2 == 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i>=30 &&i <= 40) {
-    if (i % 2 !== 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i>40 &&i <= 50) {
-    if (i % 2 == 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i>=50 &&i <= 60) {
-    if (i % 2 !== 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i>60 &&i <= 70) {
-    if (i % 2 == 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i>=70 &&i <= 80) {
-    if (i % 2 !== 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i>80 &&i <= 90) {
-    if (i % 2 == 0) {
-      boxes.style.backgroundColor = "blue";
-    }
-  }
-  if (i >= 90 && i <= 100) {
-    if (i % 2 !== 0) {
+  } else {
+    if (count % 2 !== 0) {
       boxes.style.backgroundColor = "blue";
     }
   }
