@@ -8,12 +8,15 @@
     place-items: center;
     
 }
+.rowRevere{
+    flex-direction: row-reverse;
+}
 body{
     background-color: rgb(120, 114, 114);
     height: 100vh;
 }
 .container{
-    height: 80%;
+    height: 60%;
     aspect-ratio: 1;
     border: 2px solid black;
 }
