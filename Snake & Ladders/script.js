@@ -50,33 +50,40 @@ for (let i = 100; i > 0; i--) {
   }
 }
 arr[99].appendChild(pawn);
+count = arr.length -1;
+console.log("count", count)
+let curBox = 99;
 
 let randomNumber = Math.floor(Math.random() * 6) + 1;
-console.log(randomNumber);
-
-count = arr.length -1;
 button.onclick = function () {
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].style.border = "none"; 
-    let pawn = arr[i].querySelector(".pawn");
-    if (pawn) {
-      arr[i].removeChild(pawn); 
-    }
-  }
+  console.log(curBox);
 
-  if (count > 0) {
-    count--;
-    let currentBox = arr[count];
+  curBox = curBox - randomNumber;
+  arr[curBox - randomNumber].appendChild(pawn);
+}
 
-    if (currentBox) {
-      currentBox.style.border = "2px solid white"; 
+// button.onclick = function () {
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i].style.border = "none"; 
+//     let pawn = arr[i].querySelector(".pawn");
+//     if (pawn) {
+//       arr[i].removeChild(pawn); 
+//     }
+//   }
 
-      currentBox.appendChild(pawn); 
-      // currentBox.innerText = " "
-    }
-  }
+//   if (count > 0) {
+//     count--;
+//     let currentBox = arr[count];
+
+//     if (currentBox) {
+//       currentBox.style.border = "2px solid white"; 
+
+//       currentBox.appendChild(pawn); 
+//       // currentBox.innerText = " "
+//     }
+//   }
   
-};
+// };
 start.onclick = function() {
   location.reload();
 }
