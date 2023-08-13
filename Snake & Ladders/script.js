@@ -1,10 +1,9 @@
 let container = document.createElement("div");
 container.className = "container";
 document.body.appendChild(container);
+document.body.className = "gridCenter";
 container.style.display = "flex";
-// container.style.flexDirection = "row";
 container.style.flexWrap = "wrap";
-// container.style.gap = "2px";
 let count = 0;
 
 for (let i = 100; i > 0; i--) {
