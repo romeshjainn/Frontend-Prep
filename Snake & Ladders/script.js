@@ -1,5 +1,5 @@
 let pawn = document.createElement("div");
-      pawn.className = "pawn";
+pawn.className = "pawn";
 
 let container = document.createElement("div");
 let button = document.createElement("button");
@@ -50,26 +50,26 @@ for (let i = 100; i > 0; i--) {
   }
 }
 arr[99].appendChild(pawn);
-count = arr.length -1;
-console.log("count", count)
+count = arr.length - 1;
+// console.log("count", count)
 let curBox = 99;
 
-let randomNumber = Math.floor(Math.random() * 6) + 1;
 button.onclick = function () {
-  // if (curBox > 0) {
-    console.log(curBox);
+  let randomNumber = Math.floor(Math.random() * 6) + 1;
+  // console.log(randomNumber);
 
-    curBox = curBox - randomNumber;
-    arr[curBox - randomNumber].appendChild(pawn);
-  // }
-}
+  curBox -= randomNumber;
+  arr[curBox].appendChild(pawn);
+  console.log(curBox);
+  console.log(randomNumber);
+};
 
 // button.onclick = function () {
 //   for (let i = 0; i < arr.length; i++) {
-//     arr[i].style.border = "none"; 
+//     arr[i].style.border = "none";
 //     let pawn = arr[i].querySelector(".pawn");
 //     if (pawn) {
-//       arr[i].removeChild(pawn); 
+//       arr[i].removeChild(pawn);
 //     }
 //   }
 
@@ -78,17 +78,17 @@ button.onclick = function () {
 //     let currentBox = arr[count];
 
 //     if (currentBox) {
-//       currentBox.style.border = "2px solid white"; 
+//       currentBox.style.border = "2px solid white";
 
-//       currentBox.appendChild(pawn); 
+//       currentBox.appendChild(pawn);
 //       // currentBox.innerText = " "
 //     }
 //   }
-  
+
 // };
-start.onclick = function() {
+start.onclick = function () {
   location.reload();
-}
+};
 
 // button.onclick = function () {
 //   count = count+1;
