@@ -7,6 +7,7 @@ body{
     background-color: rgb(120, 114, 114);
     height: 100vh;
     width: 100vw;
+    flex-direction: column;
 }
 .gridCenter{
     display: flex;
@@ -18,7 +19,7 @@ body{
     flex-direction: row-reverse;
 }
 .container{
-    height: 90%;
+    height: 80%;
     aspect-ratio: 1;
     border: 2px solid black;
 }
@@ -29,7 +30,7 @@ body{
 }
 button{
     /* width: 2rem; */
-    height: 2rem;
+    padding: .5rem;
 
 }
 button:hover{

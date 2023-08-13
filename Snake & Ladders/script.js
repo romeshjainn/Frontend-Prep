@@ -1,8 +1,14 @@
+let pawn = document.createElement("div");
+      pawn.className = "pawn";
+
 let container = document.createElement("div");
 let button = document.createElement("button");
+let start = document.createElement("button");
 container.className = "container";
 document.body.appendChild(container);
 document.body.appendChild(button);
+document.body.appendChild(start);
+start.innerText = "start";
 button.innerText = "button";
 document.body.className = "gridCenter";
 container.style.display = "flex";
@@ -43,21 +49,35 @@ for (let i = 100; i > 0; i--) {
     }
   }
 }
-console.log(arr);
-count = arr.length;
-
+arr[99].appendChild(pawn);
+// console.log(arr);
+count = arr.length -1;
 button.onclick = function () {
   for (let i = 0; i < arr.length; i++) {
-    arr[i].style.border = "none"; // Remove border from all boxes
+    arr[i].style.border = "none"; 
+    let pawn = arr[i].querySelector(".pawn");
+    if (pawn) {
+      arr[i].removeChild(pawn); 
+    }
   }
 
+  if (count > 0) {
     count--;
     let currentBox = arr[count];
 
     if (currentBox) {
-      currentBox.style.border = "2px solid white"; // Apply border to the current box
+      currentBox.style.border = "2px solid white"; 
+
+      currentBox.appendChild(pawn); 
+      // currentBox.innerText = " "
     }
+  }
+  
 };
+start.onclick = function() {
+  location.reload();
+}
+
 // button.onclick = function () {
 //   count = count+1;
 //   console.log(count)
