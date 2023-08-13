@@ -56,10 +56,12 @@ let curBox = 99;
 
 let randomNumber = Math.floor(Math.random() * 6) + 1;
 button.onclick = function () {
-  console.log(curBox);
+  // if (curBox > 0) {
+    console.log(curBox);
 
-  curBox = curBox - randomNumber;
-  arr[curBox - randomNumber].appendChild(pawn);
+    curBox = curBox - randomNumber;
+    arr[curBox - randomNumber].appendChild(pawn);
+  // }
 }
 
 // button.onclick = function () {
