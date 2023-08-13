@@ -44,29 +44,53 @@ for (let i = 100; i > 0; i--) {
   ) {
     if (boxCount % 2 == 0) {
       container.style.justifyContent = "row-reverse";
-      boxes.style.backgroundColor = "blue";
+      boxes.style.backgroundColor = "grey";
     }
   } else {
     if (boxCount % 2 !== 0) {
-      boxes.style.backgroundColor = "blue";
+      boxes.style.backgroundColor = "grey";
     }
   }
 }
 arr[99].appendChild(pawn);
-// let snake1 = document.getElementById("snake1");
 let snake1 = document.createElement("img");
 let snake2 = document.createElement("img");
 let snake3 = document.createElement("img");
 let snake4 = document.createElement("img");
 let snake5 = document.createElement("img");
 let snake6 = document.createElement("img");
+let ladder1 = document.createElement("img");
+let ladder2 = document.createElement("img");
+let ladder3 = document.createElement("img");
+let ladder4 = document.createElement("img");
 
-
+snake1.className = "s1";
 snake1.src = "img/s1.png"
-arr[50].appendChild(snake1);
-
 snake2.src = "img/s2.png"
-arr[20].appendChild(snake2);
+snake3.src = "img/s3.png";
+snake4.src = "img/s4.png"
+snake5.src = "img/s5.png"
+snake6.src = "img/s6.png"
+
+ladder1.src = "img/l1.png"
+ladder2.src = "img/l2.png"
+ladder3.src = "img/l3.png"
+ladder4.src = "img/l4.png"
+
+arr[12].appendChild(snake1);
+arr[87].appendChild(snake2);
+arr[63].appendChild(snake3);
+arr[19].appendChild(snake4);
+arr[50].appendChild(snake5);
+arr[58].appendChild(snake6);
+
+arr[83].appendChild(ladder1);
+arr[16].appendChild(ladder2);
+arr[44].appendChild(ladder3);
+arr[20].appendChild(ladder4);
+
+
+
 
 
 count = arr.length - 1;

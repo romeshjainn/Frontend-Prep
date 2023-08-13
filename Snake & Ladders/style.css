@@ -6,8 +6,9 @@
 body{
     background-color: rgb(120, 114, 114);
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
     flex-direction: column;
+    padding: 1rem;
 }
 .gridCenter{
     display: flex;
@@ -19,9 +20,11 @@ body{
     flex-direction: row-reverse;
 }
 .container{
-    height: 80%;
+    height: 60%;
     aspect-ratio: 1;
     border: 2px solid black;
+    margin: 1rem;
+    overflow: hidden;
 }
 .pawn{
     width: 40%;
@@ -33,14 +36,11 @@ button{
     padding: .5rem;
 
 }
-.container{
-    position: relative;
 
-}
 button:hover{
     background-color: red;
 }
 img{
     position: absolute;
-    height: 50px;
+    height: 15%;
 }
