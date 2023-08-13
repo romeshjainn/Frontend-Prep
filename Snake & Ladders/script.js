@@ -29,6 +29,7 @@ for (let i = 100; i > 0; i--) {
   boxes.className = "gridCenter";
   boxes.style.color = "white";
   boxes.innerText = i;
+  boxes.classList.add("box");
   boxCount = 100 - i + 1;
   arr.push(boxes);
 
