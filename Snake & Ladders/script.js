@@ -4,6 +4,9 @@ document.body.appendChild(container);
 document.body.className = "gridCenter";
 container.style.display = "flex";
 container.style.flexWrap = "wrap";
+
+let store = document.createElement("div");
+container.appendChild(store);
 let count = 0;
 
 for (let i = 100; i > 0; i--) {
@@ -14,19 +17,11 @@ for (let i = 100; i > 0; i--) {
   boxes.style.aspectRatio = "1";
   boxes.style.backgroundColor = "red";
   boxes.className = "gridCenter";
+  boxes.style.color = "white";
 
   boxes.innerText = i;
   count = 100 - i + 1;
-  if (
-    (count >= 11 && count <= 20) ||
-    (count >= 31 && count <= 40) ||
-    (count >= 51 && count <= 60) ||
-    (count >= 71 && count <= 80) ||
-    (count >= 91 && count <= 100)
-  ) {
-    boxes.style.border = "2px solid white"
-    // container.classList.add("rowRevere");
-  }
+
   if (
     count <= 10 ||
     (count > 20 && count <= 30) ||
@@ -44,3 +39,17 @@ for (let i = 100; i > 0; i--) {
     }
   }
 }
+
+  // if (
+  //   (count >= 11 && count <= 20) ||
+  //   (count >= 31 && count <= 40) ||
+  //   (count >= 51 && count <= 60) ||
+  //   (count >= 71 && count <= 80) ||
+  //   (count >= 91 && count <= 100)
+  // ) {
+  // }
+  // else {
+  //   // store.appendChild(boxes);
+  //   // boxes.style.border = "2px solid white";
+
+  // }
