@@ -16,6 +16,8 @@ container.style.flexWrap = "wrap";
 let boxes;
 let store = document.createElement("div");
 container.appendChild(store);
+
+
 let boxCount = 0;
 let arr = [];
 let count = 0;
@@ -51,9 +53,27 @@ for (let i = 100; i > 0; i--) {
   }
 }
 arr[99].appendChild(pawn);
+// let snake1 = document.getElementById("snake1");
+let snake1 = document.createElement("img");
+let snake2 = document.createElement("img");
+let snake3 = document.createElement("img");
+let snake4 = document.createElement("img");
+let snake5 = document.createElement("img");
+let snake6 = document.createElement("img");
+
+
+snake1.src = "img/s1.png"
+arr[50].appendChild(snake1);
+
+snake2.src = "img/s2.png"
+arr[20].appendChild(snake2);
+
+
 count = arr.length - 1;
 // console.log("count", count)
 let curBox = 99;
+
+
 
 button.onclick = function () {
   let randomNumber = Math.floor(Math.random() * 6) + 1;

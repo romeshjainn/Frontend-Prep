@@ -22,7 +22,6 @@ body{
     height: 80%;
     aspect-ratio: 1;
     border: 2px solid black;
-    position: relative;
 }
 .pawn{
     width: 40%;
@@ -34,21 +33,14 @@ button{
     padding: .5rem;
 
 }
+.container{
+    position: relative;
+
+}
 button:hover{
     background-color: red;
 }
-.images, img{
+img{
     position: absolute;
-    top: 1px;
-    height: 20px;
-}
-.boxes:nth-child(10){
-    border: 100px solid white;
-
-}
-img:nth-child(1){
-    top: 1100%;
-    height: 100px;
-    width: 140px;
-    bottom: 1px;
+    height: 50px;
 }
