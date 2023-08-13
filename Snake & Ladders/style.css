@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(120, 114, 114);
+    display: grid;
+    place-items:center;
+    height: 100vh;
+}
+.container{
+    height: 80%;
+    aspect-ratio: 1;
+    border: 2px solid black;
+}

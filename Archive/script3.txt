@@ -1,0 +1,325 @@
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+let inputArr = [];
+inputArr.push(emailInput, numberInput, nameInput);
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let not = false;
+
+undo.onclick = function () {
+  if (!not) {
+    const number = numberInput.value;
+    const email = emailInput.value;
+    const name = nameInput.value;
+    store.push(email, number, name);
+    not = true;
+  }
+  console.log(store);
+
+  count++;
+  varStore.push(emailInput, numberInput, nameInput);
+  varStore[count].value = " ";
+};
+
+let storeCount = -1;
+let inputCount = 0;
+
+redo.onclick = function () {
+  storeCount++;
+  inputCount++;
+  inputArr[inputCount].value = store[storeCount];
+};
+
+
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+let inputArr = [];
+inputArr.push(emailInput, numberInput, nameInput);
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let not = false;
+undo.onclick = function () {
+  if (!not) {
+    const number = numberInput.value;
+    const email = emailInput.value;
+    const name = nameInput.value;
+    store.push(email, number, name);
+    not = true;
+  }
+  console.log(store);
+
+  count++;
+  varStore.push(emailInput, numberInput, nameInput);
+  varStore[count].value = " ";
+};
+let storeCount = -1;
+let inputCount = 0;
+redo.onclick = function () {
+  storeCount--;
+  inputCount--;
+  inputArr[inputCount].value = store[storeCount];
+  // emailInput.value = store[];
+  // for (let i = 0; i < inputArr.length; i++){
+  // }
+};
+
+// console.log(arr);
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+let inputArr = [];
+inputArr.push(emailInput, numberInput, nameInput);
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let not = false;
+undo.onclick = function () {
+  if (!not) {
+    const number = numberInput.value;
+    const email = emailInput.value;
+    const name = nameInput.value;
+    store.push(email, number, name);
+    not = true;
+  }
+  console.log(store);
+
+  count++;
+  varStore.push(emailInput, numberInput, nameInput);
+  varStore[count].value = " ";
+};
+let storeCount = -1;
+let inputCount = 0;
+redo.onclick = function () {
+    storeCount++;
+    inputCount++;
+  inputArr[inputCount].value = store[storeCount];
+  // emailInput.value = store[];
+  // for (let i = 0; i < inputArr.length; i++){
+  // }
+};
+
+// console.log(arr);
+
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+let inputArr = [];
+inputArr.push(emailInput, numberInput, nameInput);
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let not = false;
+undo.onclick = function () {
+  if (!not) {
+    const number = numberInput.value;
+    const email = emailInput.value;
+    const name = nameInput.value;
+    store.push(email, number, name);
+    not = true;
+  }
+  console.log(store);
+
+  count++;
+  varStore.push(emailInput, numberInput, nameInput);
+  varStore[count].value = " ";
+
+  // Update storeCount and inputCount after capturing initial data
+  storeCount = store.length - 1;
+  inputCount = inputArr.length - 1;
+};
+
+let storeCount = -1;
+let inputCount = -1; // Initialize to -1 to match the 0-based index
+
+redo.onclick = function () {
+  if (storeCount >= 0 && inputCount >= 0) {
+    inputCount--;
+    storeCount--;
+
+    inputArr[inputCount].value = store[storeCount];
+    console.log(store[storeCount]);
+  }
+};
+
+
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+let inputArr = [];
+inputArr.push(emailInput, numberInput, nameInput);
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let not = false;
+undo.onclick = function () {
+  if (!not) {
+    const number = numberInput.value;
+    const email = emailInput.value;
+    const name = nameInput.value;
+    store.push(email, number, name);
+    not = true;
+  }
+  console.log(store);
+
+  count++;
+  varStore.push(emailInput, numberInput, nameInput);
+  varStore[count].value = " ";
+
+  // Update storeCount and inputCount after capturing initial data
+  storeCount = store.length - 1;
+  inputCount = inputArr.length - 1;
+};
+
+let storeCount = -1;
+let inputCount = -1; // Initialize to -1 to match the 0-based index
+
+redo.onclick = function () {
+  if (storeCount >= 0 && inputCount >= 0) {
+    inputCount--;
+    storeCount--;
+
+    inputArr[inputCount].value = store[storeCount];
+    console.log(store[storeCount]);
+  }
+};
+
+
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+let inputArr = [];
+inputArr.push(emailInput, numberInput, nameInput);
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let not = false;
+undo.onclick = function () {
+  if (!not) {
+    const number = numberInput.value;
+    const email = emailInput.value;
+    const name = nameInput.value;
+    store.push(email, number, name);
+    not = true;
+  }
+  console.log(store);
+
+  count++;
+  varStore.push(emailInput, numberInput, nameInput);
+  varStore[count].value = " ";
+
+  // Update storeCount and inputCount after capturing initial data
+  storeCount = store.length - 1;
+  inputCount = inputArr.length - 1;
+};
+
+let storeCount = -1;
+let inputCount = -1; // Initialize to -1 to match the 0-based index
+
+redo.onclick = function () {
+  if (storeCount >= 0 && inputCount >= 0) {
+    inputCount--;
+    storeCount--;
+
+    inputArr[inputCount].value = store[storeCount];
+    console.log(store[storeCount]);
+  }
+};
+
+
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+let inputArr = [];
+inputArr.push(emailInput, numberInput, nameInput);
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let not = false;
+undo.onclick = function () {
+  if (!not) {
+    const number = numberInput.value;
+    const email = emailInput.value;
+    const name = nameInput.value;
+    store.push(email, number, name);
+    not = true;
+  }
+  console.log(store);
+
+  count++;
+  varStore.push(emailInput, numberInput, nameInput);
+  varStore[count].value = " ";
+
+  // Update storeCount and inputCount after capturing initial data
+  storeCount = store.length - 1;
+  inputCount = inputArr.length - 1;
+};
+
+let storeCount = -1;
+let inputCount = -1; // Initialize to -1 to match the 0-based index
+
+redo.onclick = function () {
+  if (storeCount >= 0 && inputCount >= 0) {
+    inputCount--;
+    storeCount--;
+
+    inputArr[inputCount].value = store[storeCount];
+    console.log(store[storeCount]);
+  }
+};
+
+
+let nameInput = document.getElementById("name");
+let numberInput = document.getElementById("number");
+let emailInput = document.getElementById("email");
+
+let undo = document.getElementById("undo");
+let redo = document.getElementById("redo");
+let count = -1;
+let store = [];
+let varStore = [];
+let initialCaptured = false;
+
+undo.onclick = function () {
+    if (!initialCaptured) {
+        // Capture initial values and prevent further updates
+        const number = numberInput.value;
+        const email = emailInput.value;
+        const name = nameInput.value;
+        store.push(email, number, name);
+        console.log(store);
+
+        initialCaptured = true; // Set the flag to true
+    }
+    
+    count++;
+    varStore.push(emailInput, numberInput, nameInput);
+    varStore[count].value = " ";
+};
+
+// The rest of your code...
+

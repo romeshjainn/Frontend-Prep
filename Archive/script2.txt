@@ -10,21 +10,21 @@ let count = 0;
 let not = false;
 let not2 = false;
 
+
 undo.onclick = function () {
   if (!not2) {
     let input = nameInput.value;
     let number = numberInput.value;
     let email = emailInput.value;
     store.push(input, number, email);
-    not2 = true;
-  }
+      not2 = true;
+}
 
-  if (!not) {
+if (!not) {
     arrInput[count].value = " ";
     count++;
   }
 };
-
 
 redo.onclick = function () {
   store.reverse();

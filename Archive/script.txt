@@ -24,12 +24,10 @@ undo.onclick = function () {
     count--;
   }
 };
-count = -1;
+
 redo.onclick = function () {
   if (count < store.length - 1) {
-    
     count++;
     inputArr[count].value = store[count];
-    console.log(count)
   }
 };

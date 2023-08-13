@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>undo</title>
+  </head>
+  <body>
+    <input type="text" id="userName" />
+    <input type="number" id="userNumber" />
+    <input type="text" id="userEmail" />
+
+    <button id="undo">undo</button>
+    <button id="redo">redo</button>
+
+    <script>
+      let userName = document.getElementById("userName");
+      let userNumber = document.getElementById("userNumber");
+      let userEmail = document.getElementById("userEmail");
+      let undo = document.getElementById("undo");
+      let redo = document.getElementById("redo");
+      let inputArr = [userName, userNumber, userEmail];
+      let store = [];
+      let count = 0;
+      let count2 = -1;
+      let not = false;
+      let not1 = false;
+      undo.onclick = function () {
+        if (!not) {
+          let uName = userName.value;
+          let uNumber = userNumber.value;
+          let uEmail = userEmail.value;
+          store.push(uEmail, uNumber, uName);
+          console.log(store);
+          not = true;
+        }
+
+        if (!not1) {
+          inputArr[count].value = " ";
+          count++;
+        }
+      };
+      redo.onclick = function () {
+        count2++;
+        inputArr[count2].value = store[count2];
+      };
+    </script>
+  </body>
+</html>
