@@ -122,105 +122,107 @@ button.onclick = function () {
     curBox -= randomNumber;
     arr[curBox].appendChild(pawn);
     console.log(curBox);
-if (curBox == 77) {
-  arr[97].appendChild(pawn);
-  curBox = 97;
-  arr[curBox].style.backgroundColor = "white";
-  console.log("hello boy");
-} else if (curBox == 52) {
-  arr[74].appendChild(pawn);
-  curBox = 74;
-  arr[curBox].style.backgroundColor = "white";
-} else if (curBox == 47) {
-  arr[69].appendChild(pawn);
-  curBox = 69;
-  arr[curBox].style.backgroundColor = "white";
-} else if (curBox == 40) {
-  arr[60].appendChild(pawn);
-  curBox = 60;
-  arr[curBox].style.backgroundColor = "white";
-} else if (curBox == 9) {
-  arr[29].appendChild(pawn);
-  curBox = 29;
-  arr[curBox].style.backgroundColor = "white";
-} else if (curBox == 1) {
-  arr[23].appendChild(pawn);
-  curBox = 23;
-  arr[curBox].style.backgroundColor = "white";
-}
-// ladder logic here
-else if (curBox == 93) {
-  arr[73].appendChild(pawn);
-  curBox = 73;
-  arr[curBox].style.backgroundColor = "white";
-} else if (curBox == 54) {
-  arr[34].appendChild(pawn);
-  curBox = 34;
-  arr[curBox].style.backgroundColor = "white";
-} else if (curBox == 30) {
-  arr[10].appendChild(pawn);
-  curBox = 10;
-  arr[curBox].style.backgroundColor = "white";
-} else if (curBox == 25) {
-  arr[7].appendChild(pawn);
-  curBox = 7;
-  arr[curBox].style.backgroundColor = "white";
-}
-
+    if (curBox == 77) {
+      arr[97].appendChild(pawn);
+      curBox = 97;
+      arr[curBox].style.border = "2px solid red";
+      console.log("hello boy");
+    } else if (curBox == 52) {
+      arr[74].appendChild(pawn);
+      curBox = 74;
+      arr[curBox].style.border = "2px solid red";
+    } else if (curBox == 47) {
+      arr[69].appendChild(pawn);
+      curBox = 69;
+      arr[curBox].style.border = "2px solid red";
+    } else if (curBox == 40) {
+      arr[60].appendChild(pawn);
+      curBox = 60;
+      arr[curBox].style.border = "2px solid red";
+    } else if (curBox == 9) {
+      arr[29].appendChild(pawn);
+      curBox = 29;
+      arr[curBox].style.border = "2px solid red";
+    } else if (curBox == 1) {
+      arr[23].appendChild(pawn);
+      curBox = 23;
+      arr[curBox].style.border = "2px solid red";
+    }
+    // ladder logic here
+    else if (curBox == 93) {
+      arr[73].appendChild(pawn);
+      curBox = 73;
+      arr[curBox].style.border = "2px solid green";
+    } else if (curBox == 54) {
+      arr[34].appendChild(pawn);
+      curBox = 34;
+      arr[curBox].style.border = "2px solid green";
+    } else if (curBox == 30) {
+      arr[10].appendChild(pawn);
+      curBox = 10;
+      arr[curBox].style.border = "2px solid green";
+    } else if (curBox == 25) {
+      arr[7].appendChild(pawn);
+      curBox = 7;
+      arr[curBox].style.border = "2px solid green";
+    } else if (curBox == 0) {
+      alert("Hoorayy! Player 1 Won");
+    }
   } else {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox2 -= randomNumber;
 
     arr[curBox2].appendChild(pawn2);
-   if (curBox2 == 77) {
-     arr[97].appendChild(pawn2);
-     curBox2 = 97;
-     arr[curBox2].style.backgroundColor = "green";
-     console.log("hello boy");
-   } else if (curBox2 == 52) {
-     arr[74].appendChild(pawn2);
-     curBox2 = 74;
-     arr[curBox2].style.backgroundColor = "green";
-   } else if (curBox2 == 47) {
-     arr[69].appendChild(pawn2);
-     curBox2 = 69;
-     arr[curBox2].style.backgroundColor = "green";
-   } else if (curBox2 == 40) {
-     arr[60].appendChild(pawn2);
-     curBox2 = 60;
-     arr[curBox2].style.backgroundColor = "green";
-   } else if (curBox2 == 9) {
-     arr[29].appendChild(pawn2);
-     curBox2 = 29;
-     arr[curBox2].style.backgroundColor = "green";
-   } else if (curBox2 == 1) {
-     arr[23].appendChild(pawn2);
-     curBox2 = 23;
-     arr[curBox2].style.backgroundColor = "green";
-   }
-   // ladder logic here
-   else if (curBox2 == 93) {
-     arr[73].appendChild(pawn2);
-     curBox2 = 73;
-     arr[curBox2].style.backgroundColor = "green";
-   } else if (curBox2 == 54) {
-     arr[34].appendChild(pawn2);
-     curBox2 = 34;
-     arr[curBox2].style.backgroundColor = "green";
-   } else if (curBox2 == 30) {
-     arr[10].appendChild(pawn2);
-     curBox2 = 10;
-     arr[curBox2].style.backgroundColor = "green";
-   } else if (curBox2 == 25) {
-     arr[7].appendChild(pawn2);
-     curBox2 = 7;
-     arr[curBox2].style.backgroundColor = "green";
-   }
-
+    if (curBox2 == 77) {
+      arr[97].appendChild(pawn2);
+      curBox2 = 97;
+      arr[curBox2].style.border = "2px solid green";
+      console.log("hello boy");
+    } else if (curBox2 == 52) {
+      arr[74].appendChild(pawn2);
+      curBox2 = 74;
+      arr[curBox2].style.border = "2px solid green";
+    } else if (curBox2 == 47) {
+      arr[69].appendChild(pawn2);
+      curBox2 = 69;
+      arr[curBox2].style.border = "2px solid green";
+    } else if (curBox2 == 40) {
+      arr[60].appendChild(pawn2);
+      curBox2 = 60;
+      arr[curBox2].style.border = "2px solid green";
+    } else if (curBox2 == 9) {
+      arr[29].appendChild(pawn2);
+      curBox2 = 29;
+      arr[curBox2].style.border = "2px solid green";
+    } else if (curBox2 == 1) {
+      arr[23].appendChild(pawn2);
+      curBox2 = 23;
+      arr[curBox2].style.border = "2px solid green";
+    }
+    // ladder logic here
+    else if (curBox2 == 93) {
+      arr[73].appendChild(pawn2);
+      curBox2 = 73;
+      arr[curBox2].style.border = "2px solid red";
+    } else if (curBox2 == 54) {
+      arr[34].appendChild(pawn2);
+      curBox2 = 34;
+      arr[curBox2].style.border = "2px solid red";
+    } else if (curBox2 == 30) {
+      arr[10].appendChild(pawn2);
+      curBox2 = 10;
+      arr[curBox2].style.border = "2px solid red";
+    } else if (curBox2 == 25) {
+      arr[7].appendChild(pawn2);
+      curBox2 = 7;
+      arr[curBox2].style.border = "2px solid red";
+    } else if (curBox == 0) {
+      alert("Hoorayy! Player 2 Won");
+    }
   }
 };
 
-// arr[7].style.backgroundColor = "white";
+// arr[0].style.backgroundColor = "white";
 // Reset the game
 start.onclick = function () {
   location.reload();
