@@ -36,7 +36,6 @@ let boxes;
 let boxCount = 0;
 let arr = [];
 let count = 0;
-
 // Create the grid of boxes
 for (let i = 100; i > 0; i--) {
   boxes = document.createElement("div");
@@ -118,7 +117,7 @@ let curBox = 99;
 let curBox2 = 99;
 button.onclick = function () {
   check++;
-  if (check % 1 == 0) {
+  if (check % 2 == 0) {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox -= randomNumber;
     arr[curBox].appendChild(pawn);
@@ -128,31 +127,82 @@ button.onclick = function () {
       curBox = 97;
       arr[97].style.backgroundColor = "white";
       console.log("hello boy");
+    } else if (curBox == 52) {
+      arr[74].appendChild(pawn);
+      curBox = 74;
+    } else if (curBox == 47) {
+      arr[69].appendChild(pawn);
+      curBox = 69;
+    } else if (curBox == 40) {
+      arr[60].appendChild(pawn);
+      curBox = 60;
+    } else if (curBox == 9) {
+      arr[29].appendChild(pawn);
+      curBox = 29;
+    } else if (curBox == 1) {
+      arr[23].appendChild(pawn);
+      curBox = 23;
+    }
+    // ladder logic here
+    else if (curBox == 93) {
+      arr[73].appendChild(pawn);
+      curBox = 73;
+    } else if (curBox == 93) {
+      arr[73].appendChild(pawn);
+      curBox = 73;
+    } else if (curBox == 54) {
+      arr[34].appendChild(pawn);
+      curBox = 34;
+    } else if (curBox == 30) {
+      arr[10].appendChild(pawn);
+      curBox = 10;
+    } else if (curBox == 25) {
+      arr[10].appendChild(pawn);
+      curBox = 7;
     }
   } else {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox2 -= randomNumber;
-    if (curBox2 < 0) {
-      curBox2 = 0;
-    }
-    arr[curBox2].innerText = " ";
+
     arr[curBox2].appendChild(pawn2);
+    if (curBox == 77) {
+      arr[97].appendChild(pawn);
+      curBox = 97;
+      arr[97].style.backgroundColor = "white";
+      console.log("hello boy");
+    } else if (curBox == 52) {
+      arr[74].appendChild(pawn);
+      curBox = 74;
+    } else if (curBox == 47) {
+      arr[69].appendChild(pawn);
+      curBox = 69;
+    } else if (curBox == 40) {
+      arr[60].appendChild(pawn);
+      curBox = 60;
+    } else if (curBox == 9) {
+      arr[29].appendChild(pawn);
+      curBox = 29;
+    } else if (curBox == 1) {
+      arr[23].appendChild(pawn);
+      curBox = 23;
+    }
+
+    // ladder logic here
+    else if (curBox == 93) {
+      arr[73].appendChild(pawn);
+      curBox = 73;
+    } else if (curBox == 54) {
+      arr[34].appendChild(pawn);
+      curBox = 34;
+    } else if (curBox == 30) {
+      arr[10].appendChild(pawn);
+      curBox = 10;
+    } else if (curBox == 25) {
+      arr[10].appendChild(pawn);
+      curBox = 7;
+    }
   }
-  // console.log(curBox)
-  // console.log(curBox2)
 };
-// arr[77].style.backgroundColor = "white";
-// arr[97].style.backgroundColor = "white";
-// 87;
-// 83;
-// 63;
-// 58;
-// 50;
-// 44;
-// 20;
-// 19;
-// 16;
-// 12;
 
 // Reset the game
 start.onclick = function () {
