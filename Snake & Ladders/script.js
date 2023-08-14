@@ -124,7 +124,6 @@ button.onclick = function () {
     arr[curBox].appendChild(pawn);
     console.log(curBox);
     if (curBox == 77) {
-      arr[77].removeChild(pawn);
       arr[97].appendChild(pawn);
       curBox = 97;
       arr[97].style.backgroundColor = "white";
