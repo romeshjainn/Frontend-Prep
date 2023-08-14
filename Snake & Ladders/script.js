@@ -10,12 +10,17 @@ container.className = "container";
 document.body.appendChild(container);
 
 // Create buttons for controlling the game
+let btnBox = document.createElement("div");
+document.body.appendChild(btnBox);
 let button = document.createElement("button");
 let start = document.createElement("button");
+btnBox.appendChild(start);
+btnBox.appendChild(button);
+
+btnBox.className = "btnBox";
 start.innerText = "Start";
 button.innerText = "Roll Dice";
-document.body.appendChild(button);
-document.body.appendChild(start);
+button.className = "dice";
 
 // Set up grid center layout
 document.body.className = "gridCenter";
@@ -108,11 +113,12 @@ arr[44].appendChild(ladder3);
 arr[20].appendChild(ladder4);
 
 // Set up dice roll functionality
-let curBox = 99;
 let check = 0;
+let curBox = 99;
+let curBox2 = 99;
 button.onclick = function () {
   check++;
-  if (check % 1  == 0) {
+  if (check % 2 == 0) {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox -= randomNumber;
     if (curBox < 0) {
@@ -120,12 +126,35 @@ button.onclick = function () {
     }
     arr[curBox].innerText = " ";
     arr[curBox].appendChild(pawn);
-    
+    console.log(curBox);
+    if (curBox == 77) {
+      arr[97].style.backgroundColor = "white";
+      arr[97].appendChild(pawn);
+      console.log("hello boy");
+    }
+  } else {
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
+    curBox2 -= randomNumber;
+    if (curBox2 < 0) {
+      curBox2 = 0;
+    }
+    arr[curBox2].innerText = " ";
+    arr[curBox2].appendChild(pawn2);
   }
-  else {
-    console.log("hello");
-  }
+  // console.log(curBox)
+  // console.log(curBox2)
 };
+arr[77].style.backgroundColor = "white";
+// 87;
+// 83;
+// 63;
+// 58;
+// 50;
+// 44;
+// 20;
+// 19;
+// 16;
+// 12;
 
 // Reset the game
 start.onclick = function () {

@@ -23,11 +23,13 @@ body{
     height:  80%;
     aspect-ratio: 1;
     border: 2px solid black;
+    display: flex;
+    /* flex-direction: row-reverse; */
 }
 .pawn{
     width: 40%;
     aspect-ratio: 1;
-    background-color: white;
+    background-color: black;
 }
 .pawn2{
     width: 40%;
@@ -40,12 +42,20 @@ button{
 
 }
 
+.dice{
+    border: 2px solid ;
+}
 button:hover{
     background-color: red;
 }
 img{
     position: absolute;
     height: 15%;
+}
+.btnBox{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 @media screen and (max-width: 500px) {
