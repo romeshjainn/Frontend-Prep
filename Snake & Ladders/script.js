@@ -118,18 +118,16 @@ let curBox = 99;
 let curBox2 = 99;
 button.onclick = function () {
   check++;
-  if (check % 2 == 0) {
+  if (check % 1 == 0) {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox -= randomNumber;
-    if (curBox < 0) {
-      curBox = 0;
-    }
-    arr[curBox].innerText = " ";
     arr[curBox].appendChild(pawn);
     console.log(curBox);
     if (curBox == 77) {
-      arr[97].style.backgroundColor = "white";
+      arr[77].removeChild(pawn);
       arr[97].appendChild(pawn);
+      curBox = 97;
+      arr[97].style.backgroundColor = "white";
       console.log("hello boy");
     }
   } else {
@@ -144,7 +142,8 @@ button.onclick = function () {
   // console.log(curBox)
   // console.log(curBox2)
 };
-arr[77].style.backgroundColor = "white";
+// arr[77].style.backgroundColor = "white";
+// arr[97].style.backgroundColor = "white";
 // 87;
 // 83;
 // 63;
