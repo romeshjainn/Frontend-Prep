@@ -1,10 +1,8 @@
-// Create pawn element
+// Create pawn elements
 let pawn = document.createElement("div");
 pawn.className = "pawn";
 let pawn2 = document.createElement("div");
 pawn2.className = "pawn2";
-let diceSound = document.getElementById("diceSound");
-
 
 // Create container element
 let container = document.createElement("div");
@@ -30,18 +28,10 @@ button.className = "dice";
 container.style.display = "flex";
 container.style.flexWrap = "wrap";
 
-// Set up store area
-let store = document.createElement("div");
-container.appendChild(store);
-
-// Create and initialize variables
-let boxes;
-let boxCount = 0;
 let arr = [];
-let count = 0;
 // Create the grid of boxes
 for (let i = 100; i > 0; i--) {
-  boxes = document.createElement("div");
+  let boxes = document.createElement("div");
   container.appendChild(boxes);
   boxes.style.height = "10%";
   boxes.style.width = "10%";
@@ -51,10 +41,9 @@ for (let i = 100; i > 0; i--) {
   boxes.style.color = "white";
   boxes.innerText = i;
   boxes.classList.add("box");
-  boxCount = 100 - i + 1;
-  arr.push(boxes);
 
   // Apply specific styling for certain boxes
+  let boxCount = 100 - i + 1;
   if (
     boxCount <= 10 ||
     (boxCount > 20 && boxCount <= 30) ||
@@ -71,6 +60,8 @@ for (let i = 100; i > 0; i--) {
       boxes.style.backgroundColor = "orange";
     }
   }
+
+  arr.push(boxes);
 }
 
 // Append the pawn to a specific box
@@ -79,27 +70,24 @@ arr[99].appendChild(pawn2);
 
 // Create and set up snake and ladder images
 let snake1 = document.createElement("img");
-let snake2 = document.createElement("img");
-let snake3 = document.createElement("img");
-let snake4 = document.createElement("img");
-let snake5 = document.createElement("img");
-let snake6 = document.createElement("img");
-let ladder1 = document.createElement("img");
-let ladder2 = document.createElement("img");
-let ladder3 = document.createElement("img");
-let ladder4 = document.createElement("img");
-
-// Set up snake and ladder image sources
-snake1.className = "s1";
 snake1.src = "assets/s1.png";
+let snake2 = document.createElement("img");
 snake2.src = "assets/s2.png";
+let snake3 = document.createElement("img");
 snake3.src = "assets/s3.png";
+let snake4 = document.createElement("img");
 snake4.src = "assets/s4.png";
+let snake5 = document.createElement("img");
 snake5.src = "assets/s5.png";
+let snake6 = document.createElement("img");
 snake6.src = "assets/s6.png";
+let ladder1 = document.createElement("img");
 ladder1.src = "assets/l1.png";
+let ladder2 = document.createElement("img");
 ladder2.src = "assets/l2.png";
+let ladder3 = document.createElement("img");
 ladder3.src = "assets/l3.png";
+let ladder4 = document.createElement("img");
 ladder4.src = "assets/l4.png";
 
 // Append images to specific boxes
@@ -123,9 +111,12 @@ button.onclick = function () {
   if (check % 2 == 0) {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox -= randomNumber;
+    if (curBox < 0) {
+      curBox = 0;
+    }
     arr[curBox].appendChild(pawn);
-    console.log(curBox);
-      diceSound.play();
+    console.log(randomNumber);
+    diceSound.play();
 
     if (curBox == 77) {
       arr[97].appendChild(pawn);
@@ -176,7 +167,11 @@ button.onclick = function () {
   } else {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox2 -= randomNumber;
-      diceSound.play();
+    if (curBox2 < 0) {
+      curBox2 = 0;
+    }
+    diceSound.play();
+    console.log(randomNumber);
 
     arr[curBox2].appendChild(pawn2);
     if (curBox2 == 77) {
@@ -222,14 +217,14 @@ button.onclick = function () {
       arr[7].appendChild(pawn2);
       curBox2 = 7;
       arr[curBox2].style.border = "2px solid red";
-    } else if (curBox == 0) {
+    } else if (curBox2 == 0) {
       alert("Hoorayy! Player 2 Won");
     }
+    console.log(curBox);
   }
 };
 
 
-// arr[0].style.backgroundColor = "white";
 // Reset the game
 start.onclick = function () {
   location.reload();
