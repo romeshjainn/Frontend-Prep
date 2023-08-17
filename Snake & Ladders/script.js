@@ -111,10 +111,14 @@ button.onclick = function () {
   if (check % 2 == 0) {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox -= randomNumber;
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].style.fontSize = "1rem";
+    }
     if (curBox < 0) {
       curBox = 0;
     }
     arr[curBox].appendChild(pawn);
+    arr[curBox].style.fontSize = "1px";
     console.log(randomNumber);
     diceSound.play();
 
@@ -167,13 +171,19 @@ button.onclick = function () {
   } else {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
     curBox2 -= randomNumber;
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].style.fontSize = "1rem";
+    }
     if (curBox2 < 0) {
       curBox2 = 0;
     }
+    
+    arr[curBox2].appendChild(pawn2);
+    arr[curBox2].style.fontSize = "1px";
+
     diceSound.play();
     console.log(randomNumber);
 
-    arr[curBox2].appendChild(pawn2);
     if (curBox2 == 77) {
       arr[97].appendChild(pawn2);
       curBox2 = 97;
@@ -223,7 +233,6 @@ button.onclick = function () {
     console.log(curBox);
   }
 };
-
 
 // Reset the game
 start.onclick = function () {
